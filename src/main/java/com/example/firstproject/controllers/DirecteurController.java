@@ -39,5 +39,10 @@ public class DirecteurController {
     public void deleteDirecteur(@PathVariable int id) {
         directeurService.deleteDirecteurById(id);
     }
+
+    @GetMapping("/getByAgence")
+    public Directeur getDirecteurByAgence(@RequestParam String nom) {
+        return directeurService.getDirecteurByAgenceNom(nom);
+    }
 }
 

@@ -11,5 +11,6 @@ public interface IDirecteurService {
     public Directeur getDirecteurById(int id);
     public Directeur createDirecteur(Directeur directeur);
     public Directeur updateDirecteur(Directeur directeur);
+    Directeur getDirecteurByAgenceNom(String nom);
     public void deleteDirecteurById(int id);
 }

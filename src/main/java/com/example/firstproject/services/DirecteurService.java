@@ -36,4 +36,9 @@ public class DirecteurService implements IDirecteurService {
     public void deleteDirecteurById(int id) {
         directeurRepository.deleteById(id);
     }
+
+    @Override
+    public Directeur getDirecteurByAgenceNom(String nom) {
+        return directeurRepository.findByAgenceNom(nom);
+    }
 }

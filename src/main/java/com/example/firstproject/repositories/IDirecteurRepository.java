@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IDirecteurRepository extends CrudRepository<Directeur, Integer> {
+    Directeur findByAgenceNom(String nom);
 }
