@@ -1,5 +1,6 @@
 package com.example.firstproject.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,11 +20,12 @@ public class Agence {
     private int id;
     private String nom;
     private String adresse;
-    @ManyToOne
-    private Banque banque;
+    /*@ManyToOne
+    private Banque banque;*/
     @OneToMany(mappedBy = "agence")
     private List<Admin> admins;
     @OneToMany(mappedBy = "agence")
+    @JsonIgnore
     private List<Client> clients;
 
 }

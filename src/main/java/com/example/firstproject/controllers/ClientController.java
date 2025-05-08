@@ -1,6 +1,7 @@
 package com.example.firstproject.controllers;
 
 import com.example.firstproject.entities.Client;
+import com.example.firstproject.entities.Compte;
 import com.example.firstproject.services.IClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -38,6 +39,16 @@ public class ClientController {
     @DeleteMapping("/deleteClient/{id}")
     public void deleteClient(@PathVariable int id) {
         clientService.deleteClient(id);
+    }
+
+    @PutMapping("/affecterClientAgence")
+    public Client affecterClientAgence(@RequestBody Client client, @RequestParam int ida) {
+        return clientService.affecterClientAgence(client,ida);
+    }
+
+    @PutMapping("/ajouterEtAffecterClient")
+    public Client ajouterEtAffecterClientCompte(@RequestBody Client client) {
+        return clientService.ajouterEtAffecterClientCompte(client);
     }
 }
 

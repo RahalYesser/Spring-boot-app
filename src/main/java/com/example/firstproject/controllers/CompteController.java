@@ -1,5 +1,6 @@
 package com.example.firstproject.controllers;
 
+import com.example.firstproject.entities.Client;
 import com.example.firstproject.entities.Compte;
 import com.example.firstproject.services.ICompteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,5 +40,16 @@ public class CompteController {
     public void deleteCompte(@PathVariable int id) {
         compteService.deleteCompteById(id);
     }
+
+    @PutMapping("/affecterClient")
+    public Compte affecterClient(@RequestParam int idcp, @RequestParam int idcl) {
+        return compteService.affecterCompteClient(idcp, idcl);
+    }
+
+    /*@PutMapping("/ajouterEtAffecterClient")
+    public Compte ajouterEtAffecterClientCompte(@RequestBody Client client) {
+        return compteService.ajouterEtAffecterClientCompte(client);
+    }*/
+
 }
 

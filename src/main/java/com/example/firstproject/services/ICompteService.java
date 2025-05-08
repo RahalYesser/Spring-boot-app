@@ -1,5 +1,6 @@
 package com.example.firstproject.services;
 
+import com.example.firstproject.entities.Client;
 import com.example.firstproject.entities.Compte;
 
 import java.util.List;
@@ -12,5 +13,7 @@ public interface ICompteService {
     public Compte createCompte(Compte compte);
     public Compte updateCompte(Compte compte);
     public void deleteCompteById(int id);
+    Compte affecterCompteClient(int idcp, int idcl);
+    //Compte ajouterEtAffecterClientCompte(Client client);
 
 }

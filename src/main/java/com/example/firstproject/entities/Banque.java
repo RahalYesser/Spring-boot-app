@@ -19,6 +19,6 @@ public class Banque {
     private int id;
     private String nom;
     private String siege;
-    @OneToMany(mappedBy = "banque")
-    private List<Agence> agences;
+    @OneToMany
+    List<Agence> agences;
 }

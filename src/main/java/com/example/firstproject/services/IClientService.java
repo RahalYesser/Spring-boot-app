@@ -11,4 +11,6 @@ public interface IClientService {
     public Client createClient(Client client);
     public Client updateClient(Client client);
     public void deleteClient(int id);
+    public Client affecterClientAgence(Client client,int ida);
+    Client ajouterEtAffecterClientCompte(Client client);
 }

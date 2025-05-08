@@ -1,5 +1,6 @@
 package com.example.firstproject.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,6 +26,7 @@ public class Client {
     @ManyToOne
     private Agence agence;
     @OneToMany(mappedBy = "client")
+    //@JsonIgnore
     private List<Compte> comptes;
     @OneToMany(mappedBy = "client")
     private List<DemandeCredit> demandesCredit;

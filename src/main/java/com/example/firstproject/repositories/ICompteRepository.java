@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ICompteRepository extends CrudRepository<Compte, Integer> {
+    //Compte affecterCompteClient(int idcp, int idcl);
+
 }

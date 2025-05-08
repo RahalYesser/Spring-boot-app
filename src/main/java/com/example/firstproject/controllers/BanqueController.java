@@ -1,6 +1,7 @@
 package com.example.firstproject.controllers;
 
 import com.example.firstproject.entities.Banque;
+import com.example.firstproject.entities.Client;
 import com.example.firstproject.services.IBanqueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -38,6 +39,11 @@ public class BanqueController {
     @DeleteMapping("/deleteBanque/{id}")
     public void deleteBanque(@PathVariable int id) {
         banqueService.deleteBanque(id);
+    }
+
+    @PutMapping("/affecterBanqueAgence")
+    public Banque affecterBanqueAgence(@RequestParam int idb, @RequestParam int ida) {
+        return banqueService.affecterBanqueAgence(idb,ida);
     }
 
 }

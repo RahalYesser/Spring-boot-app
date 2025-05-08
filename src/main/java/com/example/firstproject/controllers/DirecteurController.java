@@ -40,9 +40,16 @@ public class DirecteurController {
         directeurService.deleteDirecteurById(id);
     }
 
-    @GetMapping("/getByAgence")
+    /*@GetMapping("/getByAgence")
     public Directeur getDirecteurByAgence(@RequestParam String nom) {
         return directeurService.getDirecteurByAgenceNom(nom);
+    }*/
+
+    @GetMapping("/getByBanque")
+    public Directeur getDirecteurByBanque(@RequestParam String nom) {
+        return directeurService.getDirecteurByBanqueNom(nom);
     }
+
+
 }
 

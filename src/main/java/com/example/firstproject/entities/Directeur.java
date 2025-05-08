@@ -18,5 +18,5 @@ public class Directeur {
     private int id;
     private String nom;
     @OneToOne
-    private Agence agence;
+    private Banque banque;
 }
